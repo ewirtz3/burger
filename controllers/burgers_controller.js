@@ -4,8 +4,10 @@ const burger = require("../models/burger.js");
 const router = express.Router;
 
 router.get("/", (req, res) => {
-  console.log({ burgers: data });
-  res.render("index", { burgers: data });
+  burger.all((data) => {
+    console.log({ burgers: data });
+    res.render("index", { burgers: data });
+  });
 });
 
 router.post("/api/burgers", (req, res) => {
@@ -14,7 +16,7 @@ router.post("/api/burgers", (req, res) => {
   });
 });
 
-router.put("/api/cats/:burger_name", (req, res) => {
+router.put("/api/burgers/:burger_name", (req, res) => {
   console.log(req);
   burger.update([req.body.burger_name], (result) => {
     if (result.changedRows === 0) {
