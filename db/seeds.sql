@@ -1,5 +1,5 @@
 INSERT INTO 
-burgers (burger) 
+burgers (burger_name, devoured) 
 VALUES 
 ('cheeseburger', false),
 ('mushroom burger', false),
