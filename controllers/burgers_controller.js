@@ -1,7 +1,7 @@
 const express = require("express");
 const burger = require("../models/burger.js");
 
-const router = express.Router;
+const router = express.Router();
 
 router.get("/", async (_, res) => {
   const burgers = await burger.all();
