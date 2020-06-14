@@ -22,7 +22,7 @@ router.put("/api/burgers/:burger_name", async (req, res) => {
     },
     condition
   );
-  if (result.changedRows === 0) {
+  if (results.changedRows === 0) {
     return res.status(404).end();
   }
   res.status(200).end();
