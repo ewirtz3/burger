@@ -1,3 +1,13 @@
 .jumbotron {
-  background-color: #27ae60;
+  color: lightcoral;
+  font-family: "Suez One", serif;
+}
+
+.uneaten {
+  padding: 4px;
+  margin-left: 150px;
+}
+
+.list-group-item {
+  margin-right: 100px;
 }

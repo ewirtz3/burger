@@ -4,8 +4,8 @@
 </div>
 
 
-<div class="container d-flex justify-content-center">
-    <div class="row">
+<div class="container">
+    <div class="row d-flex justify-content-around">
         <div class="col-6">
             <ul>
                 {{#each burgers}}
@@ -25,11 +25,13 @@
             </ul>
         </div>
     </div>
-    <form class="create-form row">
-        <div class="form-group col-6 text-center">
-            <textarea class="form-control row mb-3" name="add-burger" id="add-burger" cols="50" rows="3"></textarea>
-            <button class="btn btn-info row mb-3" type="submit">Submit</button>
-            <h3 class="row">Enter a burger you want to eat, then click the Submit button!</h3>
-        </div>
-    </form>
+    <div class="row d-flex mt-3 justify-content-center">
+        <form class="create-form">
+            <div class="form-group col text-center">
+                <textarea class="form-control row mb-3" name="add-burger" id="add-burger" cols="50" rows="3"></textarea>
+                <button class="btn btn-info row mb-3" type="submit">Submit</button>
+                <h3 class="row">Enter a burger you want to eat, then click the Submit button!</h3>
+            </div>
+        </form>
+    </div>
 </div>
