@@ -7,8 +7,8 @@ const burger = {
   create(burger_name) {
     return orm.insertOne(burger_name);
   },
-  update(burger_name, condition) {
-    return orm.updateOne(burger_name, condition);
+  update(condition) {
+    return orm.updateOne(condition);
   },
 };
 

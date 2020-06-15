@@ -15,7 +15,7 @@ const orm = {
 
   insertOne(burger_name) {
     return new Promise((resolve, reject) => {
-      const query = "INSERT INTO burgers (burger) VALUES (?);";
+      const query = "INSERT INTO burgers (burger_name) VALUES (?);";
       console.log(query);
       db.query(query, [burger_name], (err, result) => {
         if (err) {
@@ -26,12 +26,10 @@ const orm = {
     });
   },
 
-  updateOne(burger_name) {
+  updateOne(condition) {
     return new Promise((resolve, reject) => {
-      console.log(burger_name);
-      const query =
-        "UPDATE burgers SET devoured = true WHERE burger_name = (?)";
-      db.query(query, [burger_name], (err, result) => {
+      const query = `UPDATE burgers SET devoured = true WHERE ${condition}`;
+      db.query(query, [condition], (err, result) => {
         if (err) {
           reject(err);
         }

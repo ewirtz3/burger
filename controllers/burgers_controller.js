@@ -13,15 +13,11 @@ router.post("/api/burgers", async (req, res) => {
   res.json({ id: result.insertId });
 });
 
-router.put("/api/burgers/:burger_name", async (req, res) => {
-  console.log(req);
-  const condition = "burger_name = " + req.params.burger_name;
-  const results = await burger.update(
-    {
-      devoured: true,
-    },
-    condition
-  );
+router.put("/api/burgers/:id", async (req, res) => {
+  console.log(req.params);
+  const condition = "id = " + req.params.id;
+  console.log("condition", condition);
+  const results = await burger.update(condition);
   if (results.changedRows === 0) {
     return res.status(404).end();
   }
