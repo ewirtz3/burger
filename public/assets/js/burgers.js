@@ -1,7 +1,6 @@
 $(function () {
   $(".change-devour").on("click", (event) => {
     const id = event.currentTarget.attributes[1].nodeValue;
-    console.log(id);
 
     const newDevourState = {
       devoured: true,
@@ -11,7 +10,6 @@ $(function () {
       type: "PUT",
       data: newDevourState,
     }).then(() => {
-      console.log("changed devoured to", newDevourState);
       location.reload();
     });
   });

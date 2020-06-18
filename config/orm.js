@@ -16,7 +16,6 @@ const orm = {
   insertOne(burger_name) {
     return new Promise((resolve, reject) => {
       const query = "INSERT INTO burgers (burger_name) VALUES (?);";
-      console.log(query);
       db.query(query, [burger_name], (err, result) => {
         if (err) {
           reject(err);
