@@ -10,7 +10,7 @@ Link to app: https://intense-dusk-43049.herokuapp.com/
 
 ## Table of Contents
 
-- [Usage] (#usage)
+- [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 
