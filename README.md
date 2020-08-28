@@ -10,8 +10,13 @@ Link to app: https://intense-dusk-43049.herokuapp.com/
 
 ## Table of Contents
 
+- [Usage] (#usage)
 - [Credits](#credits)
 - [License](#license)
+
+## Usage
+
+Click the link above to see the site. Type in a burger and click Submit to add it to the left side of the page. Click the Devour It! button next to the burger to devour it and make it appear on the right side of the page.
 
 ## Credits
 
